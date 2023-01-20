@@ -179,7 +179,7 @@ class SlideAreaChart extends Component<SlideAreaChartComponentProps, State> {
      * Create an interpolator between a flat line and our chart line and use that for the animation
      * additionally the tool tip and cursor are also started at zero and moved upward with the animation
      */
-    const interpolator = interpolatePath(this.startLine, this.line, null)
+    const interpolator = interpolatePath(this.startLine, this.line, false)
     if (this.cursor.current != null) {
       this.cursor.current.setNativeCursorIndicatorProps({
         top: ((1 - value) * startY) - cursorMarkerHeight / 2 + (y * value),
